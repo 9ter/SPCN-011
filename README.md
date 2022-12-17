@@ -10,16 +10,16 @@
        - apt install qemu-guest-agent
        - systemctl enable qemu-guest-agent
        - และทำการตั้งค่าที่ option ให้เปิดใช้งานตัว Qemu guest agent เป็น Enable 
-       ![master](https://user-images.githubusercontent.com/117428887/207249679-cc1c035d-567c-47c2-bb70-4af156fbd084.png)
+       ![2](https://user-images.githubusercontent.com/98762543/208230564-e33c99a7-dabe-40c8-938b-bda6167a041e.PNG)
        - reboot เพื่อรีระบบ
    1.1) clone from template 2 vm
    - Click ที่ vm(master) > Convert to template
    -  หลังจาก vm(master) กลายเป็นtemplate ให้ Click vm แล้วเลือก Clone เป็นตัวvmใหม่2ตัว
    
-      ![click_clone](https://user-images.githubusercontent.com/117428887/207249801-0fdeac3a-f89a-4d63-beb7-018d4e3c5cf7.png)   
+      ![3](https://user-images.githubusercontent.com/98762543/208230565-6e502090-a56b-45cd-8f72-eeccd36f0897.PNG)
    - ทำการsetระบบโดย
         - date เพื่อเช็ค timezone
-          ![date](https://user-images.githubusercontent.com/117428887/207250064-7dbee734-ba17-4e07-8c8e-bfc448aed275.png) 
+          ![4](https://user-images.githubusercontent.com/98762543/208230566-8f36023a-d774-4257-b0f1-f5089ddef9d6.PNG)
         - ทำการเปลี่ยนipของระบบเพื่อไม่ให้ipซ้ำกันโดย
             - sudo -i
             - rm /var/lib/dbus/machine-id
@@ -27,20 +27,20 @@
             - ln -s /etc/machine-id /var/lib/dbus/machine-id เพื่อ link เชื่อมต่อกับ machine-id
             - reboot เพื่อรี ip ใหม่
             - หลังเปลี่ยน ip clone1
-              ![clone1](https://user-images.githubusercontent.com/117428887/207249927-11b31df4-b640-437e-925d-366fdff1e0a8.png)
+              ![5](https://user-images.githubusercontent.com/98762543/208230567-3dbdc66d-a18d-4ce6-8b29-9ca426005766.PNG)
             - หลังเปลี่ยน ip clone2
-              ![clone2](https://user-images.githubusercontent.com/117428887/207250128-efab9275-9ffb-4829-81d6-709189a7d3db.png)
+              ![6](https://user-images.githubusercontent.com/98762543/208230568-c0012667-511e-48dc-ad40-2b89729e2bfe.PNG)
  
 2) create vm from other os
-   - Create VM จากนั้นทำการตั้งค่าที่กำหนดโดยระบบปฏิบัติการที่เลือกใช้คือ Kali
+   - Create VM จากนั้นทำการตั้งค่าที่กำหนดโดยระบบปฏิบัติการที่เลือกใช้คือ Linux Mint
       - Summary ของ Linux Mint
-        ![image](https://user-images.githubusercontent.com/117428887/207254087-5c33fc7e-9147-4fe2-ba37-0b3760e770ab.png)
+       ![7](https://user-images.githubusercontent.com/98762543/208230569-5d6f113e-d440-4c16-8d8e-cc60f2243d78.PNG)
       - หน้า console screen
-        ![image](https://user-images.githubusercontent.com/117428887/207250406-0046c82f-bab3-4619-b8b3-40d1d6c397ec.png)  
+       ![8](https://user-images.githubusercontent.com/98762543/208230570-a0e6545c-8805-4bde-ac61-20d5c0107594.PNG)
 
 3) create container template 
    - Click create container template เพื่อสร้าง CT
       - Summary 
-        ![image](https://user-images.githubusercontent.com/117428887/207257544-a0089b6a-1db7-40a6-b2f2-47f3c7c7357e.png)
+        ![9](https://user-images.githubusercontent.com/98762543/208230571-43c9de55-65ed-462f-a928-32199a68885d.PNG)
       - console screen 
-        ![image](https://user-images.githubusercontent.com/117428887/207257761-fc2e8d1c-a456-4780-8b78-65498a3769db.png)
+        ![10](https://user-images.githubusercontent.com/98762543/208230572-eae4cc55-1824-45d3-8efd-ca68cd5c8484.PNG)
